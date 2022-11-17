@@ -31,7 +31,7 @@ urlpatterns = [
          CreateView.as_view(
              model=Nomination,
              fields='__all__',
-             success_url=reverse_lazy('awards:nomination-detail'),
+             success_url=reverse_lazy('awards:categories'),
              template_name='awards/generic_update.html'
          ),
          name='nomination-create'),
