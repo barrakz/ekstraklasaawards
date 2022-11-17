@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+<a href="{% url 'awards:category-create' %}">Dodaj kategorię</a><br>
+<a href="{% url 'awards:nomination-create' %}">Nominuj</a><br><br>
+
+{% for a in object_list %}
+<li><a href="{% url 'awards:category-detail' pk=a.pk %}">{{ a.name }}</a>
+<a href="{% url 'awards:category-delete' a.id %}">Usuń</a></li><br>
+
+
+{% endfor %}
+
+
+
+{% endblock %}

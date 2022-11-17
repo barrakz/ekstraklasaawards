@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+{% for n in nominations %}
+<li>{{ n.category }}<br></li>
+{{ n.name }}<br>
+
+{% endfor %}
+{% endblock %}
